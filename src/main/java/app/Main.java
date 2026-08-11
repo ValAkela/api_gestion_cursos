@@ -1,14 +1,17 @@
 package app;
 
 import models.Students;
+import models.Cursos;
+import models.Matriculas;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
+        //Lista Students
         List<Students> students = new ArrayList<>();
+
 
         students.add(new Students(1L, "Jhon", "Alvarez", "jhon@email.com", "3000000000"));
         students.add(new Students(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
@@ -16,9 +19,28 @@ public class Main {
         students.add(new Students(4L, "Melissa", "Alvarez", "melissa@email.com", "3030000000"));
         students.add(new Students(5L, "Valeria", "Alvarez", "valeria@email.com", "3040000000"));
 
-        System.out.println("List of students:");
+        System.out.println("\nList of students:");
         for (Students student : students) {
             System.out.println("ID:" + student.getId() + " " + "Name: " + student.getFirstName() + " " + student.getLastName() + " " + "Email: " + student.getEmail() + " " + "Phone: " + student.getPhone());
+        }
+        //Lista cursos
+        List<Cursos> cursos = new ArrayList<>();
+
+        cursos.add(new Cursos(1L, "REACT01", "React Desde Cero", "Curso Basico De React", 30, "2026-07-29T23:02:51.841622"));
+        cursos.add(new Cursos(2L, "SPRING01", "Spring Boot", "Curso Backend con spring boot", 26, "2026-07-29T23:02:51.841622"));
+
+        System.out.println("\nCursos asignados:");
+        for (Cursos curso : cursos){
+            System.out.println("ID:" + curso.getId() + " " + "Code: " + curso.getCode() + " " + "Name: " + curso.getName() + " " + "Description: " + curso.getDescription() + " " + "Max Capacity: " + curso.getMaxCapacity() + " " + "Created At: " + curso.getCreatedAt());
+        }
+        //Lista matriculas
+        List<Matriculas> matriculas = new ArrayList<>();
+
+        matriculas.add(new Matriculas("3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6","string","2026-08-06","2026-08-06T23:42:26.182Z"));
+
+        System.out.println("\nMatriculas realizadas:");
+        for (Matriculas matricula : matriculas){
+            System.out.println("ID:" + matricula.getId() + " " + "studenId: " + matricula.getStudentId() + " " + "courseId: " + matricula.getCourseId()+ " " + "Status: " + matricula.getStatus() + " " + "enrollmentDate: " + matricula.getEnrollmentDate() + " " + "createdAt: " + matricula.getCreatedAt());
         }
         /*
         Students student = new Students();
@@ -62,9 +84,5 @@ public class Main {
         student4.setPhone("3040000000");
         System.out.println(student4.getFirstName() + " " + student4.getLastName() + " " + student4.getEmail() + " " + student4.getPhone());
         */
-
-
-
-
     }
 }
