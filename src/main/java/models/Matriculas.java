@@ -9,6 +9,10 @@ public class Matriculas {
     private String enrollmentDate;
     private String createdAt;
 
+    public Matriculas(){
+
+    }
+
     public Matriculas(String id, String studentId, String courseId, String status, String enrollmentDate, String createdAt) {
         this.id = id;
         this.studentId = studentId;

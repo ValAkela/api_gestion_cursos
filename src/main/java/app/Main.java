@@ -28,6 +28,9 @@ public class Main {
 
         cursos.add(new Cursos(1L, "REACT01", "React Desde Cero", "Curso Basico De React", 30, "2026-07-29T23:02:51.841622"));
         cursos.add(new Cursos(2L, "SPRING01", "Spring Boot", "Curso Backend con spring boot", 26, "2026-07-29T23:02:51.841622"));
+        cursos.add(new Cursos(3L, "REACT02", "React uno", "Curso de segundo nivel React", 20, "2026-10-08t03"));
+        cursos.add(new Cursos(4L,"SPRING02", "Spring boot 02", "Curso backend con spring 02", 30,"2026-10-08T8372"));
+        cursos.add(new Cursos(5L, "REACT03", "React dos", "Curso tercer nivel de react", 25, "2026-10-08T6675"));
 
         System.out.println("\nCursos asignados:");
         for (Cursos curso : cursos){
@@ -37,6 +40,7 @@ public class Main {
         List<Matriculas> matriculas = new ArrayList<>();
 
         matriculas.add(new Matriculas("3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6","string","2026-08-06","2026-08-06T23:42:26.182Z"));
+        matriculas.add(new Matriculas("4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7","String", "2026-10-08", "2026-10-08T23:42:26.182Z"));
 
         System.out.println("\nMatriculas realizadas:");
         for (Matriculas matricula : matriculas){

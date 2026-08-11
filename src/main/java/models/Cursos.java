@@ -9,6 +9,10 @@ public class Cursos {
     private int maxCapacity;
     private String createdAt;
 
+    public Cursos(){
+
+    }
+
     public Cursos(Long id, String code, String name, String description, int maxCapacity, String createdAt) {
         this.id = id;
         this.code = code;
