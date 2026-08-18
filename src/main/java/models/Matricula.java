@@ -2,7 +2,7 @@ package models;
 
 import java.time.LocalDateTime;
 
-public class Matriculas {
+public class Matricula {
 
     private String id;
     private String studentId;
@@ -11,11 +11,11 @@ public class Matriculas {
     private String enrollmentDate;
     private String createdAt;
 
-    public Matriculas(){
+    public Matricula(){
 
     }
 
-    public Matriculas(String id, String studentId, String courseId, String status, String enrollmentDate) {
+    public Matricula(String id, String studentId, String courseId, String status, String enrollmentDate) {
         this.id = id;
         this.studentId = studentId;
         this.courseId = courseId;

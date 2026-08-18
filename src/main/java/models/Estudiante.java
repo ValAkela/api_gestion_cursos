@@ -1,6 +1,6 @@
 package models;
 
-public class Students {
+public class Estudiante {
 
     private Long id;
     private String firstName;
@@ -9,11 +9,11 @@ public class Students {
     private String phone;
 
     //constructor vacio
-    public Students(){
+    public Estudiante(){
 
     }
     // constructor lleno
-    public Students(Long id, String firstName, String lastName,String email, String phone){
+    public Estudiante(Long id, String firstName, String lastName, String email, String phone){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

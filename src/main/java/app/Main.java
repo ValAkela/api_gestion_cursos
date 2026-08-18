@@ -1,11 +1,8 @@
 package app;
 
-import models.Students;
-import models.Cursos;
-import models.Matriculas;
-
-import java.util.ArrayList;
-import java.util.List;
+import models.Estudiante;
+import models.Curso;
+import models.Matricula;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,37 +10,37 @@ public class Main {
 
 
 
-        students.add(new Students(1L, "Jhon", "Alvarez", "jhon@email.com", "3000000000"));
-        students.add(new Students(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
-        students.add(new Students(3L, "Juana", "Marin", "juana@email.com", "3020000000"));
-        students.add(new Students(4L, "Melissa", "Alvarez", "melissa@email.com", "3030000000"));
-        students.add(new Students(5L, "Valeria", "Alvarez", "valeria@email.com", "3040000000"));
+        students.add(new Estudiante(1L, "Jhon", "Alvarez", "jhon@email.com", "3000000000"));
+        students.add(new Estudiante(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
+        students.add(new Estudiante(3L, "Juana", "Marin", "juana@email.com", "3020000000"));
+        students.add(new Estudiante(4L, "Melissa", "Alvarez", "melissa@email.com", "3030000000"));
+        students.add(new Estudiante(5L, "Valeria", "Alvarez", "valeria@email.com", "3040000000"));
 
         System.out.println("\nList of students:");
-        for (Students student : students) {
+        for (Estudiante student : students) {
             System.out.println("ID:" + student.getId() + " " + "Name: " + student.getFirstName() + " " + student.getLastName() + " " + "Email: " + student.getEmail() + " " + "Phone: " + student.getPhone());
         }
         //Lista cursos
 
 
-        cursos.add(new Cursos(1L, "REACT01", "React Desde Cero", "Curso Basico De React",30));
-        cursos.add(new Cursos(2L, "SPRING01", "Spring Boot", "Curso Backend con spring boot",26));
-        cursos.add(new Cursos(3L, "REACT02", "React uno", "Curso de segundo nivel React", 20));
-        cursos.add(new Cursos(4L,"SPRING02", "Spring boot 02", "Curso backend con spring 02", 30));
-        cursos.add(new Cursos(5L, "REACT03", "React dos", "Curso tercer nivel de react", 25));
+        cursos.add(new Curso(1L, "REACT01", "React Desde Cero", "Curso Basico De React",30));
+        cursos.add(new Curso(2L, "SPRING01", "Spring Boot", "Curso Backend con spring boot",26));
+        cursos.add(new Curso(3L, "REACT02", "React uno", "Curso de segundo nivel React", 20));
+        cursos.add(new Curso(4L,"SPRING02", "Spring boot 02", "Curso backend con spring 02", 30));
+        cursos.add(new Curso(5L, "REACT03", "React dos", "Curso tercer nivel de react", 25));
 
         System.out.println("\nCursos asignados:");
-        for (Cursos curso : cursos){
+        for (Curso curso : cursos){
             System.out.println("ID:" + curso.getId() + " " + "Code: " + curso.getCode() + " " + "Name: " + curso.getName() + " " + "Description: " + curso.getDescription() + " " + "Max Capacity: " + curso.getMaxCapacity() + " " + "Created At: " + curso.getCreatedAt());
         }
         //Lista matriculas
 
 
-        matriculas.add(new Matriculas("3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6","string","2026-08-06"));
-        matriculas.add(new Matriculas("4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7","String", "2026-10-08"));
+        matriculas.add(new Matricula("3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6","string","2026-08-06"));
+        matriculas.add(new Matricula("4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7","String", "2026-10-08"));
 
         System.out.println("\nMatriculas realizadas:");
-        for (Matriculas matricula : matriculas){
+        for (Matricula matricula : matriculas){
             System.out.println("ID:" + matricula.getId() + " " + "studenId: " + matricula.getStudentId() + " " + "courseId: " + matricula.getCourseId()+ " " + "Status: " + matricula.getStatus() + " " + "enrollmentDate: " + matricula.getEnrollmentDate() + " " + "createdAt: " + matricula.getCreatedAt());
         }
         /*
