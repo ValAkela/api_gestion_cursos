@@ -14,20 +14,20 @@ public class DataStore {
     private final List<Matricula> matriculas;
 
     public DataStore(){
-        estudiantes = new ArrayList<>();
-        cursos = new ArrayList<>();
-        matriculas = new ArrayList<>();
+        this.estudiantes = new ArrayList<>();
+        this.cursos = new ArrayList<>();
+        this.matriculas = new ArrayList<>();
     }
 
-    public List<Estudiante> getAllestudianteS(){
+    public List<Estudiante> getAllestudiantes(){
         return estudiantes;
     }
     //Crear un estudiante
-    public void createEstudiante(Estudiante estudiante){
+    public void addEstudiante(Estudiante estudiante){
         estudiantes.add(estudiante);
     }
     //Leer o consultar un estudiante
-    public Estudiante getestudiante (Long id){
+    public  Estudiante getEstudiante(Long id){
         for (Estudiante estudiante : estudiantes){
             if (estudiante.getId().equals(id)){
                 return estudiante;
@@ -37,7 +37,7 @@ public class DataStore {
     }
     //Eliminar o remover un estudiante
     public void removeEstudiante(Long id) {
-        Estudiante estudiante = getestudiante(id);
+        Estudiante estudiante = getEstudiante(id);
         if (estudiante != null) {
             estudiantes.remove(estudiante);
         }
@@ -47,7 +47,7 @@ public class DataStore {
         return cursos;
     }
     //Crear un curso
-    public void createCursos(Curso curso){
+    public void addCursos(Curso curso){
         cursos.add(curso);
     }
     //Leer o consultar un curso
@@ -70,7 +70,7 @@ public class DataStore {
         return matriculas;
     }
     //Crear una matricula
-    public void createMatricula(Matricula matricula){
+    public void addMatricula(Matricula matricula){
         matriculas.add(matricula);
     }
     //Leer o consultar una matricula

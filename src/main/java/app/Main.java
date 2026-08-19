@@ -1,24 +1,45 @@
 package app;
 
+import data.DataStore;
 import models.Estudiante;
 import models.Curso;
 import models.Matricula;
 
 public class Main {
     public static void main(String[] args) {
-        //Lista Students
+        DataStore almacen = new DataStore();
 
+        System.out.println("\nLista de estudiantes");
+        almacen.addEstudiante(new Estudiante(1L, "Melissa", "Alvarez", "jhon@email.com", "3000000000"));
+        almacen.addEstudiante(new Estudiante(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
 
+        almacen.getAllestudiantes().forEach(estudiante  ->
+                System.out.println("ID:" + estudiante.getId() + " " + "Name: " + estudiante.getFirstName() + " " + estudiante.getLastName() + " " + "Email: " + estudiante.getEmail() + " " + "Phone: " + estudiante.getPhone()));
 
-        students.add(new Estudiante(1L, "Jhon", "Alvarez", "jhon@email.com", "3000000000"));
-        students.add(new Estudiante(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
-        students.add(new Estudiante(3L, "Juana", "Marin", "juana@email.com", "3020000000"));
-        students.add(new Estudiante(4L, "Melissa", "Alvarez", "melissa@email.com", "3030000000"));
-        students.add(new Estudiante(5L, "Valeria", "Alvarez", "valeria@email.com", "3040000000"));
+        System.out.println("\nLista de cursos");
+        almacen.addCursos(new Curso(1L, "REACT01", "React Desde Cero", "Curso Basico De React",30));
+        almacen.addCursos(new Curso(2L, "SPRING01", "Spring Boot", "Curso Backend con spring boot",26));
 
-        System.out.println("\nList of students:");
-        for (Estudiante student : students) {
-            System.out.println("ID:" + student.getId() + " " + "Name: " + student.getFirstName() + " " + student.getLastName() + " " + "Email: " + student.getEmail() + " " + "Phone: " + student.getPhone());
+        almacen.getAllcursos().forEach(curso ->
+                System.out.println("ID:" + curso.getId() + " " + "Code: " + curso.getCode() + " " + "Name: " + curso.getName() + " " + "Description: " + curso.getDescription() + " " + "MaxCapacity: " + curso.getMaxCapacity()));
+
+        System.out.println("\nLista de matriculas");
+        almacen.addMatricula(new Matricula("3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6", "3fa85f64-5717-4562-b3fc-2c963f66afa6","string","2026-08-06"));
+        almacen.addMatricula(new Matricula("4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7", "4gs96g75-6828-5673-b4gv-3v074g777sgs7","String", "2026-10-08"));
+
+        almacen.getAllMatriculas().forEach(matricula ->
+                System.out.println("ID:" + matricula.getId() + " " + "studenId: " + matricula.getStudentId() + " " + "courseId: " + matricula.getCourseId()+ " " + "Status: " + matricula.getStatus() + " " + "enrollmentDate: " + matricula.getEnrollmentDate() + " " + "createdAt: " + matricula.getCreatedAt()));
+
+        /*Lista estudiantes
+        estudiantes.add(new Estudiante(1L, "Jhon", "Alvarez", "jhon@email.com", "3000000000"));
+        estudiantes.add(new Estudiante(2L, "Mateo", "Marin", "mateo@email.com", "3010000000"));
+        estudiantes.add(new Estudiante(3L, "Juana", "Marin", "juana@email.com", "3020000000"));
+        estudiantes.add(new Estudiante(4L, "Melissa", "Alvarez", "melissa@email.com", "3030000000"));
+        estudiantes.add(new Estudiante(5L, "Valeria", "Alvarez", "valeria@email.com", "3040000000"));
+
+        System.out.println("\nLista de estudiantes:");
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println("ID:" + estudiante.getId() + " " + "Name: " + estudiante.getFirstName() + " " + estudiante.getLastName() + " " + "Email: " + estudiante.getEmail() + " " + "Phone: " + estudiante.getPhone());
         }
         //Lista cursos
 
@@ -43,7 +64,7 @@ public class Main {
         for (Matricula matricula : matriculas){
             System.out.println("ID:" + matricula.getId() + " " + "studenId: " + matricula.getStudentId() + " " + "courseId: " + matricula.getCourseId()+ " " + "Status: " + matricula.getStatus() + " " + "enrollmentDate: " + matricula.getEnrollmentDate() + " " + "createdAt: " + matricula.getCreatedAt());
         }
-        /*
+
         Students student = new Students();
         Students student1 = new Students();
         Students student2 = new Students();
@@ -83,7 +104,6 @@ public class Main {
         student4.setLastName("Alvarez");
         student4.setEmail("valeria@email.com");
         student4.setPhone("3040000000");
-        System.out.println(student4.getFirstName() + " " + student4.getLastName() + " " + student4.getEmail() + " " + student4.getPhone());
-        */
-    }
+        System.out.println(student4.getFirstName() + " " + student4.getLastName() + " " + student4.getEmail() + " " + student4.getPhone());*/
+    ;}
 }
