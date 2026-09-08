@@ -28,6 +28,7 @@ public class Curso {
         return id;
     }
 
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -72,6 +73,15 @@ public class Curso {
         this.createdAt = createdAt;
     }
 
-
+    @Override
+    public String toString(){
+        return "ID = '" + id + '\'' + "\n" +
+                "CODIGO ='" + code + '\'' + "\n" +
+                "Nombre ='" + name + '\'' + "\n" +
+                "Descripcion ='" + description + '\'' + "\n" +
+                "Capacidad Maxidad = '" + maxCapacity + '\'' + "\n" +
+                "Fecha = '" + createdAt + '\'' +
+                "\n";
+    }
 }
 

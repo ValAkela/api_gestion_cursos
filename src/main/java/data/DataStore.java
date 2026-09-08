@@ -9,17 +9,16 @@ import java.util.List;
 
 public class DataStore {
 
-    private final List<Estudiante> estudiantes;
+    private static final List<Estudiante> estudiantes = new ArrayList<>();
     private final List<Curso> cursos;
     private final List<Matricula> matriculas;
 
     public DataStore(){
-        this.estudiantes = new ArrayList<>();
         this.cursos = new ArrayList<>();
         this.matriculas = new ArrayList<>();
     }
 
-    public List<Estudiante> getAllestudiantes(){
+    public static List <Estudiante> getAllestudiantes(){
         return estudiantes;
     }
     //Crear un estudiante

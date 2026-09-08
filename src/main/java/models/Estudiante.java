@@ -60,4 +60,13 @@ public class Estudiante {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    @Override
+    public String toString(){
+        return "Nombre = '" + firstName + '\'' + "\n" +
+                "Apellido='" + lastName + '\'' + "\n" +
+                "Email ='" + email + '\'' + "\n" +
+                "Teléfono ='" + phone + '\'' +
+                "\n";
+    }
 }

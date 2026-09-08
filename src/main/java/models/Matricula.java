@@ -71,4 +71,15 @@ public class Matricula {
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
+
+    @Override
+    public String toString() {
+        return "ID = '" + id + '\'' + "\n" +
+                "ID Estudiante ='" + studentId + '\'' + "\n" +
+                "ID Curso ='" + courseId + '\'' + "\n" +
+                "Estatus ='" + status + '\'' + "\n" +
+                "Dato Matricula = '" + enrollmentDate + '\'' + "\n" +
+                "Fecha = '" + createdAt + '\'' +
+                "\n";
+    }
 }

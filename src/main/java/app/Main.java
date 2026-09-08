@@ -1,12 +1,27 @@
 package app;
 
+import Repositories.EstudianteRepository;
+import Repositories.impl.EstudianteRepositoryImpl;
+import Repositories.impl.EstudianteServiceImpl;
+import Service.EstudianteService;
 import data.DataStore;
 import models.Estudiante;
 import models.Curso;
 import models.Matricula;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
+
+        EstudianteRepository estudianteRepository = new EstudianteRepositoryImpl(DataStore.getAllestudiantes());
+        EstudianteService estudianteService = new EstudianteServiceImpl(estudianteRepository);
+        EstudianteConsole estudianteConsole = new EstudianteConsole(estudianteService);
+
+        estudianteConsole.createEstudiante();
+        estudianteConsole.listEstudiante();
+    }
+        /*
         DataStore almacen = new DataStore();
 
         System.out.println("\nLista de estudiantes");
@@ -104,6 +119,6 @@ public class Main {
         student4.setLastName("Alvarez");
         student4.setEmail("valeria@email.com");
         student4.setPhone("3040000000");
-        System.out.println(student4.getFirstName() + " " + student4.getLastName() + " " + student4.getEmail() + " " + student4.getPhone());*/
-    ;}
+        System.out.println(student4.getFirstName() + " " + student4.getLastName() + " " + student4.getEmail() + " " + student4.getPhone());
+    ;}*/
 }
