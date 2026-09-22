@@ -1,8 +1,8 @@
-package data;
+package api_gestion_cursos.data;
 
-import models.Curso;
-import models.Matricula;
-import models.Estudiante;
+import api_gestion_cursos.models.Curso;
+import api_gestion_cursos.models.Matricula;
+import api_gestion_cursos.models.Estudiante;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,13 +10,10 @@ import java.util.List;
 public class DataStore {
 
     private static final List<Estudiante> estudiantes = new ArrayList<>();
-    private final List<Curso> cursos;
-    private final List<Matricula> matriculas;
+    private final List<Curso> cursos = new ArrayList<>();
+    private final List<Matricula> matriculas = new ArrayList<>();
 
-    public DataStore(){
-        this.cursos = new ArrayList<>();
-        this.matriculas = new ArrayList<>();
-    }
+
 
     public static List <Estudiante> getAllestudiantes(){
         return estudiantes;

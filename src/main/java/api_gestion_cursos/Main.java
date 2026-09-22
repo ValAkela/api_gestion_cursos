@@ -1,15 +1,10 @@
-package app;
+package api_gestion_cursos;
 
-import Repositories.EstudianteRepository;
-import Repositories.impl.EstudianteRepositoryImpl;
-import Repositories.impl.EstudianteServiceImpl;
-import Service.EstudianteService;
-import data.DataStore;
-import models.Estudiante;
-import models.Curso;
-import models.Matricula;
-
-import java.util.List;
+import api_gestion_cursos.Repositories.EstudianteRepository;
+import api_gestion_cursos.Repositories.impl.EstudianteRepositoryImpl;
+import api_gestion_cursos.Repositories.impl.EstudianteServiceImpl;
+import api_gestion_cursos.Service.EstudianteService;
+import api_gestion_cursos.data.DataStore;
 
 public class Main {
     public static void main(String[] args) {

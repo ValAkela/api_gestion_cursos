@@ -1,6 +1,6 @@
-package Service;
+package api_gestion_cursos.Service;
 
-import models.Matricula;
+import api_gestion_cursos.models.Matricula;
 
 import java.util.List;
 

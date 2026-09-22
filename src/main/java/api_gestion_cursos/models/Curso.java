@@ -1,4 +1,4 @@
-package models;
+package api_gestion_cursos.models;
 
 import java.time.LocalDateTime;
 

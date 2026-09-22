@@ -1,10 +1,10 @@
-package Repositories;
+package api_gestion_cursos.Service;
 
-import models.Curso;
+import api_gestion_cursos.models.Curso;
 
 import java.util.List;
 
-public interface CursoRepository {
+public interface CursoService {
     List<Curso> findAll();
     void save(Curso curso);
     Curso findById(Long id);

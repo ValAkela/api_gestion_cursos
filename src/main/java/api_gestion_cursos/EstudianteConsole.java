@@ -1,7 +1,7 @@
-package app;
+package api_gestion_cursos;
 
-import Service.EstudianteService;
-import models.Estudiante;
+import api_gestion_cursos.Service.EstudianteService;
+import api_gestion_cursos.models.Estudiante;
 
 import java.util.List;
 import java.util.Scanner;

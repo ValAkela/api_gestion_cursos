@@ -1,7 +1,7 @@
-package Repositories.impl;
+package api_gestion_cursos.Repositories.impl;
 
-import Repositories.CursoRepository;
-import models.Curso;
+import api_gestion_cursos.Repositories.CursoRepository;
+import api_gestion_cursos.models.Curso;
 
 import java.util.List;
 

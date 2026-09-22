@@ -1,8 +1,8 @@
-package Repositories.impl;
+package api_gestion_cursos.Repositories.impl;
 
-import Repositories.EstudianteRepository;
-import Service.EstudianteService;
-import models.Estudiante;
+import api_gestion_cursos.Repositories.EstudianteRepository;
+import api_gestion_cursos.Service.EstudianteService;
+import api_gestion_cursos.models.Estudiante;
 
 import java.util.List;
 
